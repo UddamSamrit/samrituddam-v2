@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   target: 'server',
   nitro: {
     preset: 'cloudflare',  // Set the preset for Cloudflare Workers
+    serveStatic: true,
   },
   /**
    * * App Config
