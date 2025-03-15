@@ -1,5 +1,5 @@
 # Use a base image with Node.js pre-installed (e.g., Node.js 22)
-FROM node:22
+FROM node:22.9.0
 
 # Install PostgreSQL client tools
 RUN apt-get update && \
