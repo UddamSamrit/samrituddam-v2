@@ -1,0 +1,23 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    restart: always
+    container_name: SAMRITUDDAM
+    working_dir: /app
+    volumes:
+      - ./:/app
+    networks:
+      - samrituddam-network
+    ports:
+      - "3336:3000"
+    command: >
+      sh -c "yarn install && yarn dev"
+
+#Docker Networks
+networks:
+  samrituddam-network:
+    driver: bridge
+
+

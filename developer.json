@@ -1,7 +1,7 @@
 {
-    "name": "Micheal Weaver",
-    "logo_name": "micheal-weaver",
-    "role": "Front-end developer",
+    "name": "Samrit Uddam",
+    "logo_name": "samrituddam",
+    "role": "Full-Stack developer",
     "about": {
         "sections": {
             "professional-info": {
@@ -64,15 +64,15 @@
         "direct": {
             "title": "contacts",
             "sources": {
-                "email": "user@gmail.com",
-                "phone": "+3598246359"
+                "email": "samrituddam20@gmail.com",
+                "phone": "+85510999673"
             }
         },
         "social": {
             "github": {
                 "title": "Github profile",
                 "url": "https://github.com/",
-                "user": "username"
+                "user": "UddamSamrit"
             },
             "facebook": {
                 "title": "Facebook profile",
