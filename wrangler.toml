@@ -1,0 +1,3 @@
+name = "samrituddam"  # This is the name of your Cloudflare Worker
+main = "./.output/server/index.mjs"  # Path to the Nuxt server entry point generated after build
+compatibility_date = "2025-03-15"  # Set to today's date or a future date

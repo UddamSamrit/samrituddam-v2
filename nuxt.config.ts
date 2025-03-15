@@ -9,6 +9,11 @@ const siteTitle = `${config.name} | ${config.role}`
 export default defineNuxtConfig({
   compatibilityDate: '2025-02-28',
   devtools: { enabled: true },
+  ssr: true,
+  target: 'server',
+  nitro: {
+    preset: 'cloudflare',  // Set the preset for Cloudflare Workers
+  },
   /**
    * * App Config
    * app config: https://nuxt.com/docs/api/configuration/nuxt-config#app
