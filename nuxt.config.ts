@@ -9,42 +9,43 @@ const siteTitle = `${config.name} | ${config.role}`
 export default defineNuxtConfig({
   compatibilityDate: '2025-02-28',
   devtools: { enabled: true },
-  ssr: true,
-  target: 'server',
+  ssr: false,
   nitro: {
-    preset: 'cloudflare',  // Set the preset for Cloudflare Workers
-    serveStatic: true,
+    preset: "cloudflare-pages"
   },
-  /**
-   * * App Config
-   * app config: https://nuxt.com/docs/api/configuration/nuxt-config#app
-   * head config: https://nuxt.com/docs/api/configuration/nuxt-config#head
-   * meta config: https://nuxt.com/docs/getting-started/seo-meta
-   * pageTransition config: https://nuxt.com/docs/getting-started/transitions#transitions
-   * TODO: Add more meta tags for SEO
-   * TODO: Add tags for social media sharing
-   * TODO: Migrate apple-touch-icon config to manifest.json
-   */
+  
   app: {
+    
     head: {
-      htmlAttrs: {
-        lang: 'en', // App language
-      },
+      // htmlAttrs: {
+      //   lang: 'en', // App language
+      // },
       title: siteTitle, // App window nav title
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'A awesome developer portfolio design.' },
-        { hid: 'og:title', property: 'og:title', content: siteTitle },
-        { hid: 'og:description', property: 'og:description', content: 'A awesome developer portfolio design.' },
-        { hid: 'og:image', property: 'og:image', content: 'demo-share.jpg' },
-        { hid: 'og:url', property: 'og:url', content: 'https://developer-portfolio-v1.netlify.app/' },
-        { name: 'theme-color', content: '#010C15' },
-        // ...
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        },
+        {
+          name: 'format-detection',
+          content: 'telephone=no',
+        },
+        { 
+          name: 'theme-color', 
+          content: '#010C15' 
+        },
       ],
+
       link: [
-        { rel: 'manifest', href: 'pwa/manifest.json' },
-        { rel: 'apple-touch-icon', href: 'pwa/icons/apple-touch-icon.png' },
+        { rel: 'icon', href: '/favicon.ico' },  // Favicon
+        { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon.png' },  // Apple touch icon
+        { rel: 'manifest', href: '/manifest.json' }
       ],
     },
   },
@@ -75,6 +76,7 @@ export default defineNuxtConfig({
     injectPosition: 0,
     viewer: false,
   },
+
 
   /**
    * * Runtime Config (Environment Variables)

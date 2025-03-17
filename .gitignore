@@ -6,6 +6,3 @@ node_modules
 .output
 .env
 dist
-
-yarn.lock
-package-lock.json

@@ -1,5 +1,5 @@
 <template>
-    <div id="project" :key="key" class="lg:mx-5">
+    <div id="project" class="lg:mx-5" data-aos="fade-in">
 
         <span class="flex text-sm my-3">
             <h3 v-if="index == null" class="text-purplefy font-fira_bold mr-3">Project {{ key + 1 }}</h3>

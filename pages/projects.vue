@@ -67,7 +67,7 @@
           </span>
         </div>
 
-        <project-card v-for="(project, index) in projects" :index="index" :project="project" />
+        <project-card v-for="(project, index) in projects" :index="index" :key="project.id" :project="project" />
 
       </div>
     </div>
