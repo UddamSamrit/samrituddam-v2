@@ -3,12 +3,18 @@ main = "./.output/server/index.mjs"
 compatibility_date = "2025-03-15"
 
 [build]
-command = "npm run build"
+command = "npm install && npm run build"
 
 [site]
-bucket = "./.output/public" 
+bucket = "./.output/public"
+exclude = []
 
 [env.production]
 workers_dev = false
-route = "https://samrituddam.samrituddam20.workers.dev/*"
-main = "./.output/server/index.mjs"
+route = "https://samrituddam.com/*"
+main = ".output/server/index.mjs" 
+
+[[rules]]
+type = "Data"
+globs = ["**/*.{json,png,jpg,jpeg,gif,svg}"]
+fallthrough = true

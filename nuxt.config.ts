@@ -7,12 +7,17 @@ const siteTitle = `${config.name} | ${config.role}`
  Usage: https://nuxt.com/docs/api/configuration/nuxt-config
  */
 export default defineNuxtConfig({
+  ssr: true,
+  nitro: {
+    preset: "cloudflare",
+  },
+
   compatibilityDate: '2025-02-28',
   devtools: { enabled: true },
-  ssr: false,
-  nitro: {
-    preset: "cloudflare-pages"
-  },
+  // ssr: false,
+  // nitro: {
+  //   preset: "cloudflare-pages"
+  // },
   
   app: {
     
